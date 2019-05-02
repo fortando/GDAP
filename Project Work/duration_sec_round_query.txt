@@ -1,0 +1,6 @@
+SELECT track_id
+, track_name
+, track_artist
+, duration_ms
+, round((duration_ms / 1000)) as duration_sec
+FROM gdap_project.kws

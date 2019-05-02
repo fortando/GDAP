@@ -1,0 +1,13 @@
+﻿STARRED PLAYLIST DATA LOAD:
+BEGIN;
+CREATE SCHEMA IF NOT EXISTS gdap_project;
+
+CREATE TABLE IF NOT EXISTS gdap_project.starred_playlist (
+	added_by VARCHAR (75) PRIMARY KEY,
+	track_id VARCHAR (75), 
+	track_artist VARCHAR (75), 
+	track_name VARCHAR (250)
+	);
+COPY gdap_project.starred_playlist FROM 'c:/Users/forta/Desktop/gdap_data/GDAP/starred_playlist_combined_mk2.csv'
+WITH DELIMITER ',' CSV HEADER;
+COMMIT;

@@ -1,0 +1,24 @@
+BEGIN;
+CREATE SCHEMA IF NOT EXISTS gdap_project;
+CREATE TABLE IF NOT EXISTS gdap_project.joined_100(
+        source VARCHAR (10), 
+	track_id VARCHAR (150) PRIMARY KEY,
+        track_name VARCHAR (150),
+        track_artist VARCHAR (150),
+        danceability DECIMAL,
+        energy DECIMAL,
+        key DECIMAL,
+        loudness DECIMAL,
+        mode FLOAT,
+        speechiness DECIMAL,
+        acousticness DECIMAL,
+        instrumentalness DECIMAL,
+        liveness DECIMAL,
+        valence DECIMAL,
+        tempo DECIMAL,
+        duration_sec FLOAT,
+        time_signature FLOAT
+        );
+COPY gdap_project.joined_100 FROM 'c:/Users/forta/Desktop/gdap_data/GDAP/join_100_mk1_source.csv'
+WITH DELIMITER ',' CSV HEADER;
+COMMIT;

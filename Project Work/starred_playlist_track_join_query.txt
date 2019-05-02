@@ -1,0 +1,18 @@
+﻿SELECT p.track_id 
+, p.track_artist
+, p.track_name
+, t.danceability
+, t.energy
+, t.loudness
+, t.mode
+, t.speechiness
+, t.acousticness
+, t.instrumentalness
+, t.liveness
+, t.valence
+, t.tempo
+, t.duration_ms
+, t.time_signature
+FROM gdap_project.starred_playlist p
+	INNER JOIN gdap_project.starred_tracks t
+		ON p.track_id = t.id

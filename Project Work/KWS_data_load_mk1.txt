@@ -1,0 +1,23 @@
+BEGIN;
+CREATE SCHEMA IF NOT EXISTS gdap_project;
+CREATE TABLE IF NOT EXISTS gdap_project.KWS (
+        track_id VARCHAR (150) PRIMARY KEY,
+        track_name VARCHAR (150),
+        track_artist VARCHAR (150),
+        danceability DECIMAL,
+        energy DECIMAL,
+        key DECIMAL,
+        loudness DECIMAL,
+        mode FLOAT,
+        speechiness DECIMAL,
+        acousticness DECIMAL,
+        instrumentalness DECIMAL,
+        liveness DECIMAL,
+        valence DECIMAL,
+        tempo DECIMAL,
+        duration_ms FLOAT,
+        time_signature FLOAT
+        );
+COPY gdap_project.KWS FROM 'c:/Users/forta/Desktop/gdap_data/GDAP/joined_starred_query_result_mk2.csv'
+WITH DELIMITER ',' CSV HEADER;
+COMMIT;

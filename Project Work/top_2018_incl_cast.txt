@@ -1,0 +1,14 @@
+SELECT CAST (avg(danceability) as FLOAT) as avg_dance
+, CAST (avg(energy) as FLOAT) as avg_energy
+, CAST (avg(key) as FLOAT) as avg_key
+, CAST (avg(loudness) as FLOAT) as avg_loud
+, CAST (avg(mode) as FLOAT) as avg_mode
+, CAST (avg(speechiness) as FLOAT) as avg_speech
+, CAST (avg(acousticness) as FLOAT) as avg_acoust
+, CAST (avg(instrumentalness) as FLOAT) as avg_instrum
+, CAST (avg(liveness) as FLOAT) as avg_live
+, CAST (avg(valence) as FLOAT) as avg_valence
+, CAST (avg(tempo) as FLOAT) as avg_tempo
+, CAST (avg(duration_ms) as FLOAT) as avg_duration_ms
+, CAST (avg(time_signature) as FLOAT) as avg_timesig
+FROM gdap_project.top2018

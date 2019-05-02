@@ -1,0 +1,3 @@
+SELECT * FROM gdap_project.kws
+UNION ALL
+SELECT * FROM gdap_project.top2018
