@@ -1,0 +1,11 @@
+SELECT track_name
+FROM gdap_project.joined_100
+WHERE track_artist = 'Drake'
+
+
+SELECT COUNT(track_name),
+, track_artist
+FROM gdap_project.joined_100
+GROUP BY track_artist
+HAVING COUNT(track_name) >1
+ORDER BY COUNT(track_name) DESC;
